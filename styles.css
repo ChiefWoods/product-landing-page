@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Source+Sans+3:wght@400;600&family=Titillium+Web:wght@200;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --github-black: #0D1117;
+  --header-height: 85px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: inline-flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: calc(100vw - (100vw - 100%));
+}
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: white;
+}
+
+header>a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+}
+
+#header-img {
+  width: 5rem;
+}
+
+.brand {
+  font-size: 4.5rem;
+  font-family: 'Titillium Web', sans-serif;
+  margin-left: 10px;
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  gap: 6rem;
+  margin-left: 30px;
+}
+
+.nav-link {
+  font-size: 2.3rem;
+  font-family: 'Titillium Web', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 30px;
+  padding-bottom: 100px;
+  margin-top: var(--header-height);
+  flex: 1;
+  gap: 100px;
+}
+
+/* Discover */
+
+section,
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: var(--header-height);
+}
+
+#discover {
+  gap: 40px;
+}
+
+.title {
+  font-size: 5rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
+}
+
+#video {
+  width: 50%;
+  aspect-ratio: 16/9;
+}
+
+/* Features */
+
+#features {
+  width: 100%;
+  gap: 50px;
+}
+
+#features>div {
+  display: flex;
+}
+
+#features img {
+  width: 50%;
+  min-height: 125px;
+}
+
+#features>div>div {
+  padding: 65px;
+  background-color: #DCE1E3;
+}
+
+#features h2 {
+  font-size: 4rem;
+  font-family: 'Comfortaa', cursive;
+  letter-spacing: 0.1rem;
+  margin-bottom: 50px;
+}
+
+#features p {
+  font-size: 2rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+}
+
+/* Build */
+
+#build {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-inline: 14%;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+}
+
+.model {
+  background-color: #DCE1E3;
+  padding: 45px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.name {
+  font-size: 2.8rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+.starting {
+  font-size: 1.3rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+.model p {
+  font-size: 1.6rem;
+  font-family: 'Source Sans 3', sans-serif;
+  text-align: justify;
+}
+
+.model button {
+  margin-top: auto;
+}
+
+.model button,
+#submit {
+  font-size: 2rem;
+  font-family: 'Comfortaa', cursive;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+/* Form */
+
+form {
+  gap: 20px;
+}
+
+#email {
+  width: 275px;
+  height: 30px;
+  padding-inline: 5px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  background-color: var(--github-black);
+  padding: 12px 40px;
+}
+
+.made-by {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0 auto;
+}
+
+.github-link {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.github-icon {
+  height: 25px;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 67.5%;
+  }
+
+  #video {
+    width: 90%;
+  }
+
+  #features> :nth-child(1),
+  #features> :nth-child(3) {
+    flex-direction: column;
+  }
+
+  #features> :nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  #features img {
+    width: 100%;
+    height: auto;
+  }
+
+  #features>div>div {
+    padding: 40px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .model {
+    max-width: 300px;
+  }
+}
